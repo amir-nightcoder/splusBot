@@ -10,8 +10,8 @@ from datetime import datetime
 import schedule
 
 ###############################
-group_link = "https://splus.ir/joingroup/AI8cw_sZndcKLlIGQ909_w"
-group_id = "-1009379011"
+group_link = "https://splus.ir/joingroup/AHVkWc1uzikM1_xEyngFkw"
+group_id = "-1007693401"
 ###############################
 error_log = []
 
@@ -111,14 +111,14 @@ fohsh = '''کیر
 ثلم
 سلوم'''
 
-firefox_driver_path = 'geckodriver.exe'
+firefox_driver_path = 'geckodriver'
 
 
 firefox_options = Options()
-# firefox_options.headless = True  
-# firefox_options.add_argument("--no-sandbox")
-# firefox_options.add_argument("--headless")
-# firefox_options.add_argument("--disable-gpu")
+firefox_options.headless = True  
+firefox_options.add_argument("--no-sandbox")
+firefox_options.add_argument("--headless")
+firefox_options.add_argument("--disable-gpu")
 
 
 driver = webdriver.Firefox(executable_path=firefox_driver_path, options=firefox_options)
