@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
 from time import sleep
 from random import choice
@@ -112,7 +113,7 @@ fohsh = '''کیر
 سلوم'''
 
 firefox_driver_path = 'geckodriver'
-
+service = Service(firefox_driver_path)
 
 firefox_options = Options()
 firefox_options.headless = True  
@@ -121,7 +122,7 @@ firefox_options.add_argument("--headless")
 firefox_options.add_argument("--disable-gpu")
 
 
-driver = webdriver.Firefox(executable_path=firefox_driver_path, options=firefox_options)
+driver = webdriver.Firefox(service=service, options=firefox_options)
 
 
 driver.get(f"https://web.splus.ir/#{group_id}")
